@@ -7,4 +7,11 @@ export default defineNitroConfig({
 		mailPass: process.env.NUXT_MAIL_PASS,
 	},
 	preset: 'vercel',
+	routeRules: {
+		'/api/**': {
+			headers: {
+				'Access-Control-Allow-Origin': '*'
+			}
+		}
+	}
 })
