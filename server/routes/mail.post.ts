@@ -3,18 +3,6 @@ import nodemailer from 'nodemailer'
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event)
 	const config = useRuntimeConfig(event)
-	const method = event.method
-
-	appendCorsHeaders(event, {
-		origin: '*',
-	  })
-
-	if (method === 'OPTIONS') {
-		appendCorsPreflightHeaders(event, {
-			methods: ['GET', 'POST'],
-		})
-		setResponseStatus(event, 200)
-	}
 
 	try {
 		const transporter = nodemailer.createTransport({
