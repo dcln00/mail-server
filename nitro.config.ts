@@ -6,7 +6,7 @@ export default defineNitroConfig({
 		mailUser: process.env.NUXT_MAIL_USER,
 		mailPass: process.env.NUXT_MAIL_PASS,
 	},
-	preset: 'vercel',
+	preset: 'vercel_edge',
 	routeRules: {
 		'/mail': {
 			cors: true,
