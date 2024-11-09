@@ -10,11 +10,7 @@ export default defineNitroConfig({
 	routeRules: {
 		'/api/**': {
 			cors: true,
-			headers: {
-				'Access-Control-Allow-Origin': 'https://hireafrica.io',
-				'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
-				'Access-Control-Allow-Headers': 'Content-Type'
-			}
+
 		}
 	}
 })
