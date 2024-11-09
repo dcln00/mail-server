@@ -10,7 +10,7 @@ export default defineNitroConfig({
 	routeRules: {
 		'/api/**': {
 			headers: {
-				'Access-Control-Allow-Origin': '*'
+				'Access-Control-Allow-Origin': 'https://hireafrica.io'
 			}
 		}
 	}
