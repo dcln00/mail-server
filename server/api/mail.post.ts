@@ -28,9 +28,5 @@ export default defineEventHandler(async (event) => {
 		return { message: 'Email sent' }
 	} catch (e) {
 		console.log(e)
-		throw createError({
-			statusCode: 500,
-			statusMessage: e.message,
-		})
 	}
 })
