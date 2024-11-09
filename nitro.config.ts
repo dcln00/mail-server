@@ -11,10 +11,10 @@ export default defineNitroConfig({
 		'/api/**': {
 			cors: true,
 			headers: {
-				'Access-Control-Allow-Origin': '*',
 				'Access-Control-Allow-Methods': '*',
 				'Access-Control-Allow-Headers': 'Content-Type'
-			}
+			},
+			
 		}
 	}
 })
