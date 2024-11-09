@@ -23,6 +23,9 @@ export default defineEventHandler(async (event) => {
 			to: `support@hireafrica.io`,
 			subject: body.subject,
 			text: body.text,
+			headers: {
+				'Access-Control-Allow-Origin': 'https://hireafrica.io'
+			},
 		})
 
 		return { message: 'Email sent' }
