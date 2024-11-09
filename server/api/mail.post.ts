@@ -3,7 +3,11 @@ import nodemailer from 'nodemailer'
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event)
 	const config = useRuntimeConfig(event)
-	setResponseStatus(event, 200)
+	const method = event.method
+
+	if(method === 'OPTIONS') {
+		setResponseStatus(event, 200)
+	}
 
 	try {
 		const transporter = nodemailer.createTransport({
