@@ -9,6 +9,7 @@ export default defineNitroConfig({
 	preset: 'vercel',
 	routeRules: {
 		'/api/**': {
+			cors: true,
 			headers: {
 				'Access-Control-Allow-Origin': 'https://hireafrica.io'
 			}
