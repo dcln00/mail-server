@@ -5,7 +5,11 @@ export default defineEventHandler(async (event) => {
 	const config = useRuntimeConfig(event)
 	const method = event.method
 
-	if(method === 'OPTIONS') {
+	if (method === 'OPTIONS') {
+		appendCorsPreflightHeaders(event, {
+			origin: '*', 
+			methods: ['GET', 'POST'],
+		})
 		setResponseStatus(event, 200)
 	}
 
