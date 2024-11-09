@@ -11,7 +11,7 @@ export default defineNitroConfig({
 		'/api/**': {
 			cors: true,
 			headers: {
-				'Access-Control-Allow-Methods': '*',
+				'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
 				'Access-Control-Allow-Headers': 'Content-Type'
 			},
 			
