@@ -8,7 +8,7 @@ export default defineNitroConfig({
 	},
 	preset: 'vercel',
 	routeRules: {
-		'/api/**': {
+		'/mail': {
 			cors: true,
 			headers: {
 				'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
