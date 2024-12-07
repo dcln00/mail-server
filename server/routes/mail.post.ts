@@ -2,15 +2,14 @@ import nodemailer from 'nodemailer'
 
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event)
-	const config = useRuntimeConfig(event)
 
 	try {
 		const transporter = nodemailer.createTransport({
-			host: config.mailHost,
-			port: 587,
+			host: body.host,
+			port: body.port,
 			auth: {
-				user: config.mailUser,
-				pass: config.mailPass,
+				user: body.user,
+				pass: body.pass,
 			},
 			tls: {
 				rejectUnauthorized: false,
