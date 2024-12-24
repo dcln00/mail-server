@@ -17,9 +17,9 @@ export default defineEventHandler(async (event) => {
 		})
 
 		await transporter.sendMail({
-			from: `support <nii@hireafrica.io>`,
+			from: body.send,
 			replyTo: body.to,
-			to: `support@hireafrica.io`,
+			to: body.rec,
 			subject: body.subject,
 			text: body.text,
 		})
